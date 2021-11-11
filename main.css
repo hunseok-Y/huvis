@@ -97,7 +97,7 @@ a {
 }
 
 .header__nav .nav:hover .content__menu+.header__box {
-  opacity: 1;
+  overflow: visible;
 }
 
 .content__menu {
@@ -129,7 +129,7 @@ a {
   margin: 0 auto;
   background-color: bisque;
   border: 1px solid red;
-  opacity: 0;
+  overflow: hidden;
 }
 
 
