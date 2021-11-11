@@ -10,7 +10,6 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   margin: 0;
   cursor: default;
-  background-color: #8e8e8e;
 }
 
 li {
@@ -193,4 +192,51 @@ a {
   position: fixed;
   height: calc(90px - 100vw);
   right: 90px;
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: 100%;
+}
+
+.item-slise {
+  overflow: hidden;
+}
+
+.item-slise .item-slise__bg {
+  position: absolute;
+  background-image: url(./img/main/mainVisual01_3.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.4);
+  transition: all 6s;
+  z-index: -1;
+}
+
+.item-slise__text-arear {
+  width: 100%;
+  height: 100%;
+  margin-top: 330px;
+  padding: 0 810px;
+}
+
+.item-slise__text-arear .title {
+  font-size: 8rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.item-slise__text-arear .text {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.item-slise__text-arear .point {
+  color: #01b4e5;
+  ;
 }

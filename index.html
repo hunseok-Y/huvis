@@ -108,7 +108,8 @@
         <ul class="button-maun">
           <li class="button-maun__item search"><a href="#" class="anchor"><i class="fas fa-search icon"><span
                   class="icon__hidden">search</span></i></a></li>
-          <li class="button-maun__item store"><a href="#" class="anchor"><i class="material-icons icon">storefront</i>
+          <li class="button-maun__item store">
+            <a href="#" class="anchor"><i class="material-icons icon">storefront</i>
               <span class="text">공개구매</span>
             </a></li>
           <li class="button-maun__item store"><a href="#" class="anchor"><i class="material-icons icon">hive</i>
@@ -122,20 +123,46 @@
     <div class="header__box"></div>
   </header>
 
-  <main>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
+  <main class="main-page">
+    <div class="swiper mySwiper main-page-swiper">
+      <div class="swiper-wrapper main-page-wrapper ">
+        <div class="swiper-slide main-page-item item">
+
+          <div class="swiper mySwiper item-list list ">
+            <div class="swiper-wrapper list__wrapper">
+              <div class="swiper-slide item-slise">
+                
+                <div class="item-slise__bg"></div>
+                <ul class="item-slise__text-arear">
+                  <li class="title">소재의</li>
+                  <li class="title point">무한한</li>
+                  <li class="title">가능성</li>
+                  <li class="text">The Infinite potential of </li>
+                  <li class="text point"> Materials</li>
+
+                </ul>
+
+              </div>
+              <div class="swiper-slide item-slise">Slide 2</div>
+              <div class="swiper-slide item-slise">Slide 3</div>
+              <div class="swiper-slide item-slise">Slide 4</div>
+            </div>
+            <div class="swiper-button-next list-button-next"></div>
+            <div class="swiper-button-prev list-button-prev"></div>
+            <div class="swiper-pagination list-pagination"></div>
+          </div>
+
+        </div>
+        <div class="swiper-slide main-page-item">Slide 2</div>
+        <div class="swiper-slide main-page-item">Slide 3</div>
+        <div class="swiper-slide main-page-item">Slide 4</div>
         <!-- <div class="swiper-slide">Slide 5</div>
         <div class="swiper-slide">Slide 6</div>
         <div class="swiper-slide">Slide 7</div>
         <div class="swiper-slide">Slide 8</div>
         <div class="swiper-slide">Slide 9</div> -->
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination main-page__pagination"></div>
     </div>
   </main>
 
