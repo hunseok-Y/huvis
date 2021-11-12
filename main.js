@@ -22,8 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     nested: true,
     observer: true,
     observeParents: true,
+    speed: 2000,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
     // autoplay: {
-    //   delay: 3000,
+    //   delay: 9000,
     //   disableOnInteraction: false,
     // },
     pagination: {

@@ -226,7 +226,6 @@ a {
 
 .item-slise .item-slise__bg {
   position: absolute;
-  background-image: url(./img/main/mainVisual01_3.jpg);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -234,6 +233,22 @@ a {
   transform: scale(1.4);
   transition: all 4s;
   z-index: -1;
+}
+
+.item-slise .item-slise__bg-1 {
+  background-image: url(./img/main/mainVisual01_3.jpg);
+}
+
+.item-slise__bg-2 {
+  background-image: url(./img/main/mainVisual02.jpg);
+}
+
+.item-slise__bg-3 {
+  background-image: url(./img/main/mainVisual03_3.jpg);
+}
+
+.item-slise__bg-4 {
+  background-image: url(./img/main/mainVisual04.jpg);
 }
 
 .item-slise__text-arear {
@@ -276,7 +291,7 @@ a {
   width: 14px;
   height: 14px;
   background: none;
-  font-weight: 300;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
@@ -290,6 +305,40 @@ a {
   width: auto;
   height: 20px;
   position: absolute;
-  top: 370px;
+  top: 390px;
   left: 0;
+}
+
+.list-pagination {
+  position: relative;
+}
+
+.list-button-next {
+  position: absolute;
+  top: 397px;
+  left: 160px;
+  opacity: 1;
+}
+
+.list-button-prev {
+  position: absolute;
+  top: 397px;
+  left: 130px;
+  opacity: 1;
+}
+
+.list-button-next::after {
+  content: "next";
+  font-size: 11px;
+  color: #fff;
+}
+
+.list-button-prev::after {
+  content: "prev";
+  font-size: 11px;
+  color: #fff;
+}
+
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
 }
