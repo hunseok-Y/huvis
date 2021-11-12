@@ -22,7 +22,7 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--color-black);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -91,6 +91,10 @@ a {
   line-height: 100px;
 }
 
+.nav__main-menu__name .anchor {
+  color: black;
+}
+
 .nav__main-menu__content {
   width: 100%;
   height: 100%;
@@ -112,7 +116,7 @@ a {
   width: 100%;
   height: 100%;
   visibility: visible;
-  color: black;
+  color: #fff;
 }
 
 .nav__main-menu:hover,
@@ -121,8 +125,18 @@ a {
   color: white;
 }
 
+.nav__main-menu:hover .nav__main-menu__name .anchor,
+.nav__main-menu:hover,
+.nav__main-menu:hover .content__menu__discription .anchor {
+  color: white;
+}
+
 .content__menu {
   position: relative;
+}
+
+.content__menu .anchor {
+  color: black;
 }
 
 .content__menu__discription {
