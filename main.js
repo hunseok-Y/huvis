@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nested: true,
     observer: true,
     observeParents: true,
+    speed: 2000,
     delay: 3000,
     pagination: {
       el: ".main-page__pagination",
@@ -27,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeEffect: {
       crossFade: true,
     },
-    // autoplay: {
-    //   delay: 9000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".list-pagination",
       clickable: true,
