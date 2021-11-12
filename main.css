@@ -187,6 +187,12 @@ a {
   height: 100vh;
 }
 
+.swiper-slide {
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
 .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical>.swiper-pagination-bullets {
   position: fixed;
@@ -196,7 +202,8 @@ a {
 
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
-  height: 100%;
+  height: 100vh;
+  margin: 0;
 }
 
 .item-slise {
@@ -211,7 +218,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   transform: scale(1.4);
-  transition: all 6s;
+  transition: all 4s;
   z-index: -1;
 }
 
@@ -219,13 +226,20 @@ a {
   width: 100%;
   height: 100%;
   margin-top: 330px;
-  padding: 0 810px;
+}
+
+.item-slise__text-arear .inner {
+  width: 1090px;
+  margin: 0 auto;
+  transform: translate(0);
+  position: relative;
 }
 
 .item-slise__text-arear .title {
   font-size: 8rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.1;
+  color: #fff;
 }
 
 .item-slise__text-arear .text {
@@ -234,9 +248,34 @@ a {
   line-height: 1.2;
   display: inline-block;
   margin-top: 40px;
+  color: #fff;
+  margin-right: 10px;
 }
 
 .item-slise__text-arear .point {
   color: #01b4e5;
-  ;
+}
+
+/* item-slise list-pagination 버튼 수정*/
+.swiper-pagination-bullet {
+  border: 1px solid #fff;
+  width: 14px;
+  height: 14px;
+  background: none;
+  font-weight: 300;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  width: 48px;
+  height: 14px;
+  border-radius: 20px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto;
+  height: 20px;
+  position: absolute;
+  top: 370px;
+  left: 0;
 }
