@@ -91,10 +91,6 @@ a {
   line-height: 100px;
 }
 
-.nav__main-menu__name .anchor {
-  color: black;
-}
-
 .nav__main-menu__content {
   width: 100%;
   height: 100%;
@@ -116,19 +112,26 @@ a {
   width: 100%;
   height: 100%;
   visibility: visible;
+}
+
+.header__nav .nav:hover .nav__main-menu__name .anchor {
+  color: black;
+}
+
+.header__nav .nav .nav__main-menu__name:hover .anchor {
   color: #fff;
 }
+
 
 .nav__main-menu:hover,
 .nav__main-menu:hover .content__menu__discription {
   background-color: darkblue;
-  color: white;
+  color: #fff;
 }
 
-.nav__main-menu:hover .nav__main-menu__name .anchor,
 .nav__main-menu:hover,
 .nav__main-menu:hover .content__menu__discription .anchor {
-  color: white;
+  color: #fff;
 }
 
 .content__menu {
@@ -202,16 +205,10 @@ a {
 }
 
 .swiper-slide {
+  width: 100%;
   height: 100%;
   margin: 0;
   position: relative;
-}
-
-.swiper-pagination-vertical.swiper-pagination-bullets,
-.swiper-vertical>.swiper-pagination-bullets {
-  position: fixed;
-  height: calc(90px - 100vw);
-  right: 90px;
 }
 
 .swiper-autoheight,
@@ -253,7 +250,7 @@ a {
 
 .item-slise__text-arear {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   margin-top: 330px;
 }
 
@@ -285,8 +282,161 @@ a {
   color: #01b4e5;
 }
 
+/* products */
+.products {
+  text-align: center;
+}
+
+.products__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  background-image: url(./img/produts/product_bg.jpg);
+}
+
+.products__text-arear {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.products__text-arear .title {
+  font-size: 7rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.products__text-arear .text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.products__slick-center {
+  display: inline-block;
+}
+
+/* Company */
+.company__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.company__img {
+  background-image: url(./img/company/comp_bg.jpg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.company__inner {
+  width: 1090px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.companu__container {
+  width: 100%;
+}
+
+.container__text-arear {
+  width: 100%;
+}
+
+.container__text-arear .title {
+  font-size: 7rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.container__text-arear .text {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.container__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.container__item .item {
+  width: 260px;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 90px;
+  position: relative;
+}
+
+.companu__container ul li:nth-child(1) {
+  background-image: url(./img/company/comp_img01.jpg);
+}
+
+.companu__container ul li:nth-child(2) {
+  background-image: url(./img/company/comp_img02.jpg);
+}
+
+.companu__container ul li:nth-child(3) {
+  background-image: url(./img/company/comp_img03.jpg);
+}
+
+.companu__container ul li:nth-child(4) {
+  background-image: url(./img/company/comp_img04.jpg);
+}
+
+.container__item .item .title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 80px;
+  display: inline-block;
+}
+
+.container__item .item .button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all .4s;
+}
+
+.container__item .item .button:hover {
+  background-color: #01b4e5;
+}
+
+
+
+/* main-page__pagination 버튼 수정*/
+.main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical>.swiper-pagination-bullets {
+  position: fixed;
+  height: calc(90px - 100vw);
+  right: 90px;
+}
+
+
 /* item-slise list-pagination 버튼 수정*/
-.swiper-pagination-bullet {
+.list-pagination.swiper-pagination .swiper-pagination-bullet {
   border: 1px solid #fff;
   width: 14px;
   height: 14px;
@@ -294,7 +444,7 @@ a {
   opacity: 1;
 }
 
-.swiper-pagination-bullet-active {
+.list-pagination.swiper-pagination .swiper-pagination-bullet-active {
   background-color: #fff;
   width: 48px;
   height: 14px;

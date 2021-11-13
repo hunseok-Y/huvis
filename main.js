@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainPgeSwiper = new Swiper(".main-page-swiper", {
     direction: "vertical",
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     mousewheel: true,
     autoHeight: true,
     nested: true,
