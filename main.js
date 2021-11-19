@@ -71,11 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".family__button");
   button.addEventListener("click", () => {
     const dropdown = document.querySelector(".family__discroption");
-    button.classList.add("active");
+    dropdown.classList.add("show");
   });
 
   button.addEventListener("blur", () => {
     const dropdown = document.querySelector(".family__discroption");
-    dropdown.classList.remove("active");
+    dropdown.classList.remove("show");
   });
 });
