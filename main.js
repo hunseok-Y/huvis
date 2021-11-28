@@ -75,8 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   $(".box-slide__list").slick({
-    centerMode: true,
-    centerPadding: "60px",
     slidesToShow: 3,
+    centerMode: true,
+    centerPadding: "0px",
+    autoplay: false,
+    speed: 1000,
+    swipe: true,
   });
 });
