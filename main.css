@@ -268,7 +268,7 @@ a {
 
 /* swiper */
 .swiper {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -385,29 +385,30 @@ a {
   margin-top: 40px;
 }
 
-.products__swiper {
+.box-slide {
   width: 1100px;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 70px;
 }
 
-.products__swiper .swiper-slide {
-  width: 298px;
+.box-slide .box-slide__list {
+  /* width: 298px; */
   height: 455px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 
-.products__swiper .swiper-slide-active {
+.box-slide__list .swiper-slide-active {
   width: 500px;
 }
 
 
-.products__swiper .products-box {
+.box-slide__item .products-box {
   width: 298px;
   height: 300px;
   background-color: #fff;
@@ -415,7 +416,7 @@ a {
 
 }
 
-.products__swiper .swiper-slide-active .products-box {
+.box-slide__list .swiper-slide-active .products-box {
   width: 100%;
   height: 455px;
   background-color: #002957;
@@ -425,11 +426,11 @@ a {
 .products-box .text-arear .title {
   font-size: 4rem;
   font-weight: 700;
-  color: #fff;
+  color: #15181b;
 }
 
 .products-box .text-arear .text {
-  color: #fff;
+  color: #15181b;
   font-size: 1.6rem;
   line-height: 24px;
   margin-top: 24px;
@@ -437,7 +438,7 @@ a {
 }
 
 .products-box .info {
-  color: #fff;
+  color: #15181b;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -449,6 +450,7 @@ a {
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
   padding: 0 12px;
+
 }
 
 .products-box .info .item::after {
@@ -464,6 +466,7 @@ a {
 .products-box .info .anchor {
   font-size: 1.4rem;
   line-height: 45px;
+  color: #15181b;
 }
 
 .products-box .info .anchor::after {
@@ -911,7 +914,7 @@ a {
 
 /* footer */
 .footer {
-  width: 100vw;
+  width: 100%;
 }
 
 .top__box {
@@ -1017,6 +1020,10 @@ a {
   margin-right: 306px;
 }
 
+.family__button-box {
+  position: relative;
+}
+
 .family__button {
   width: 100%;
   height: 50px;
@@ -1035,6 +1042,7 @@ a {
   visibility: hidden;
   transition: all .4s;
   opacity: 0;
+  position: absolute;
 }
 
 .family__discroption .text {
@@ -1046,6 +1054,7 @@ a {
 
 .family__discroption .list {
   padding: 10px 0;
+  background-color: rgb(0, 0, 0);
 }
 
 .family__discroption.show {

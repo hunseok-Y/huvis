@@ -60,22 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  new Swiper(".products__swiper", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 30,
-    nested: true,
-    loop: true,
-  });
-
   const button = document.querySelector(".family__button");
+  const dropdown = document.querySelector(".family__discroption");
+  const familyBox = document.querySelector(".family__button-box");
+
   button.addEventListener("click", () => {
-    const dropdown = document.querySelector(".family__discroption");
     dropdown.classList.add("show");
   });
 
-  button.addEventListener("blur", () => {
-    const dropdown = document.querySelector(".family__discroption");
-    dropdown.classList.remove("show");
+  familyBox.addEventListener("mouseleave", () => {
+    if (dropdown.classList.contains("show")) {
+      dropdown.classList.remove("show");
+    }
+  });
+
+  $(".box-slide__list").slick({
+    centerMode: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
   });
 });
