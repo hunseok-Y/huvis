@@ -1242,6 +1242,8 @@ a {
   opacity: 1;
 }
 
+/* @media (min-width: 1024px) and (max-width:1920px) */
+
 @media screen and (min-width: 1024px) {
   .header {
     padding: 0 20px;
@@ -1263,16 +1265,26 @@ a {
 
   .header__side-maun {
     right: 0;
+    padding-right: 10px;
   }
 
   .nav__main-menu__name {
-    width: 14rem;
+    width: 13rem;
     font-size: 1.6rem;
   }
 
 
   .nav__main-menu__content {
     height: auto;
+  }
+
+  .button-maun {
+    padding: 7px 5px;
+  }
+
+  .button-maun__item {
+    width: 5rem;
+    height: 5rem;
   }
 
 
