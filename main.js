@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observeParents: true,
     speed: 1000,
     delay: 3000,
+    breakpoints: true,
     pagination: {
       el: ".main-page__pagination",
       clickable: true,

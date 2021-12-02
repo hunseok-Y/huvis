@@ -27,7 +27,7 @@ a {
 }
 
 .inner {
-  width: 1090px;
+  width: 1080px;
   margin: 0 auto;
   position: relative;
 }
@@ -58,6 +58,8 @@ a {
   margin-top: 5px;
   position: fixed;
   z-index: 1999;
+  padding: 0 40px;
+
 }
 
 .header::after {
@@ -75,8 +77,9 @@ a {
 
 
 .header__inner {
-  max-width: 1700px;
-  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 40px;
+  /* position: relative; */
 }
 
 .header__logo {
@@ -93,12 +96,13 @@ a {
 .header__nav {
   position: relative;
   z-index: 1;
+
 }
 
 .header__nav .nav {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-content: center;
   height: 100%;
   margin: 0 auto;
   text-align: center;
@@ -134,15 +138,15 @@ a {
   z-index: 2;
 }
 
-.header__nav .nav::after {
+/* .header__nav .nav::after {
   content: '';
   opacity: 0;
-}
+} */
 
 .header__nav .nav:hover:after {
   content: '';
   width: 500%;
-  height: 102%;
+  height: 100%;
   position: absolute;
   background-color: #fff;
   left: 50%;
@@ -214,20 +218,16 @@ a {
 
 /* header__side-maun */
 .header__side-maun {
-  position: absolute;
-  top: 0;
-  right: 120px;
   z-index: 10;
-  margin-top: 20px;
+  position: fixed;
+  top: 24px;
+  padding-right: 40px;
 }
 
 .button-maun {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto 0;
   z-index: 100;
 }
 
@@ -318,11 +318,10 @@ a {
 
 .item-slise__text-arear {
   width: 100%;
-  /* height: 100%; */
   margin-top: 330px;
 }
 
-.item-slise__text-arear .inner {
+.item-slise .inner {
   transform: translate(0);
   position: relative;
 }
@@ -332,6 +331,7 @@ a {
   font-weight: 500;
   line-height: 1.1;
   color: #fff;
+  display: block;
 }
 
 .item-slise__text-arear .text {
@@ -644,7 +644,6 @@ a {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  margin-top: 40px 0;
 }
 
 .content__box__list {
@@ -726,6 +725,7 @@ a {
   display: inline-block;
   font-size: 1.8rem;
   font-weight: 300;
+  line-height: 28px;
 }
 
 .content__container {
@@ -1242,14 +1242,162 @@ a {
   opacity: 1;
 }
 
-/* @media screen (max-width: 1366px) {
+@media screen and (min-width: 1024px) {
   .header {
-    max-width: 1024px;
+    padding: 0 20px;
   }
 
   .header__inner {
-    max-width: 1024px;
+    max-width: 1600px;
+    padding: 0 20px;
+  }
+
+  .header::after {
+    width: calc(100% - 40px);
+  }
+
+  .header__logo {
+    transform: scale(.8);
   }
 
 
-} */
+  .header__side-maun {
+    right: 0;
+  }
+
+  .nav__main-menu__name {
+    width: 14rem;
+    font-size: 1.6rem;
+  }
+
+
+  .nav__main-menu__content {
+    height: auto;
+  }
+
+
+  .button-maun__item.search {
+    font-size: 1.4rem;
+  }
+
+  .content__menu__discription {
+    font-size: 1.2rem;
+  }
+
+  .material-icons {
+    font-size: 2rem;
+  }
+
+  .main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets,
+  .main-page__pagination.swiper-vertical>.swiper-pagination-bullets {
+    right: 3rem;
+  }
+
+  .main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    /* width: 50px;
+    height: 50px;
+    font-size: 1.2rem; */
+  }
+
+  .item-slise__text-arear {
+    transform: scale(.8);
+    margin-top: 150px;
+  }
+
+  .products__text-arear {
+    transform: scale(.8);
+    margin-top: 15rem;
+  }
+
+  .products__text-arear .title {
+    font-size: 6rem;
+  }
+
+  .products__text-arear .text {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin: 0;
+  }
+
+  .box-slide {
+    transform: scale(.7);
+    margin: -60px;
+  }
+
+  .box-slide .box-slide__list {
+    margin: 0;
+    transform: scale(.8);
+  }
+
+  .company__box {
+    transform: scale(.7);
+  }
+
+  .container__text-arear .title {
+    font-size: 6rem;
+    margin-right: 4rem;
+  }
+
+  .container__text-arear .text {
+    font-size: 1.6rem;
+  }
+
+  .career__container {
+    transform: scale(.7);
+  }
+
+  .career__text-arear .title {
+    font-size: 6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .career__text-arear .text {
+    font-size: 1.6rem;
+  }
+
+  .content__box {
+    margin-top: -20px;
+  }
+
+  .prconter__content {
+    transform: scale(.7);
+  }
+
+  .content__text-arear .title {
+    font-size: 6rem;
+    margin-right: 4rem;
+  }
+
+  .content__text-arear .text {
+    font-style: 1.6rem;
+  }
+
+  .life__warpper {
+    transform: scale(.7);
+  }
+
+  .footer__top .inner {
+    max-width: 1000px;
+  }
+
+  .bottom__inner {
+    max-width: 1080px;
+    padding: 0 30pxz;
+  }
+
+  .footer__bottom {}
+
+  .family {
+    margin: 0;
+  }
+
+  .footer__bottom {
+    padding: 46px 0;
+  }
+
+  .bottom__container {
+    padding: 0 10px;
+  }
+
+
+}
