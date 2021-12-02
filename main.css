@@ -77,9 +77,8 @@ a {
 
 
 .header__inner {
-  max-width: 1600px;
   padding: 0 40px;
-  /* position: relative; */
+  position: relative;
 }
 
 .header__logo {
@@ -221,7 +220,8 @@ a {
   z-index: 10;
   position: fixed;
   top: 24px;
-  padding-right: 40px;
+  right: 0;
+  padding-right: 120px;
 }
 
 .button-maun {
@@ -1244,7 +1244,7 @@ a {
 
 /* @media (min-width: 1024px) and (max-width:1920px) */
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width:1920px) {
   .header {
     padding: 0 20px;
   }
