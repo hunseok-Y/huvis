@@ -1,6 +1,6 @@
 import Swiper from "https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js";
 document.addEventListener("DOMContentLoaded", () => {
-  const bullet = [
+  const sectionNames = [
     "Main",
     "Products",
     "About us",
@@ -8,34 +8,25 @@ document.addEventListener("DOMContentLoaded", () => {
     "PR Center",
     "Life in Huvis",
   ];
-  const mainPgeSwiper = new Swiper(".main-page-swiper", {
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 0,
-    mousewheel: true,
-    autoHeight: true,
-    nested: true,
-    observer: true,
-    observeParents: true,
-    speed: 1000,
-    delay: 3000,
-    breakpoints: true,
-    pagination: {
-      el: ".main-page__pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return (
-          '<div class="' +
-          className +
-          '"><span>' +
-          bullet[index] +
-          "</span></div>"
-        );
-      },
+
+  $(".main-page-wrapper").fullpage({
+    autoScrolling: true,
+    scrollHorizontally: true,
+    navigation: true,
+    navigationPosition: "right",
+    navigationTooltips: sectionNames,
+    css3: true,
+    onLeave: function (index, nextIndex, direction) {
+      const navElement = document.querySelector("#fp-nav");
+      if (nextIndex === 7) {
+        navElement.classList.add("hidden");
+      } else {
+        navElement.classList.remove("hidden");
+      }
     },
   });
 
-  const ItemList = new Swiper(".item-list", {
+  const ItemList = new Swiper(".visual-list", {
     spaceBetween: 0,
     centeredSlides: true,
     autoHeight: true,
@@ -61,6 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  $(".box-slide__list").slick({
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: "0px",
+    autoplay: false,
+    speed: 1000,
+    swipe: true,
+  });
+
   const button = document.querySelector(".family__button");
   const dropdown = document.querySelector(".family__discroption");
   const familyBox = document.querySelector(".family__button-box");
@@ -73,14 +73,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (dropdown.classList.contains("show")) {
       dropdown.classList.remove("show");
     }
-  });
-
-  $(".box-slide__list").slick({
-    slidesToShow: 3,
-    centerMode: true,
-    centerPadding: "0px",
-    autoplay: false,
-    speed: 1000,
-    swipe: true,
   });
 });

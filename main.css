@@ -43,13 +43,11 @@ a {
 }
 
 .bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
 }
+
+
 
 /* header */
 .header {
@@ -137,12 +135,7 @@ a {
   z-index: 2;
 }
 
-/* .header__nav .nav::after {
-  content: '';
-  opacity: 0;
-} */
-
-.header__nav .nav:hover:after {
+.header__nav .nav:hover::after {
   content: '';
   width: 500%;
   height: 100%;
@@ -266,30 +259,16 @@ a {
   display: block;
 }
 
-/* swiper */
-.swiper {
-  width: 100%;
-  height: 100vh;
-}
 
-.swiper-slide {
-  width: 100%;
+.visual-list {
   height: 100%;
-  margin: 0;
-  position: relative;
 }
 
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
-  height: 100vh;
-  margin: 0;
-}
-
-.item-slise {
+.visual-list__item {
   overflow: hidden;
 }
 
-.item-slise .item-slise__bg {
+.visual-list__item .item-slise__bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -300,7 +279,7 @@ a {
   z-index: -1;
 }
 
-.item-slise .item-slise__bg-1 {
+.item-slise__bg-1 {
   background-image: url(./img/main/mainVisual01_3.jpg);
 }
 
@@ -321,7 +300,7 @@ a {
   margin-top: 330px;
 }
 
-.item-slise .inner {
+.visual-list__item.inner {
   transform: translate(0);
   position: relative;
 }
@@ -386,14 +365,10 @@ a {
 }
 
 .box-slide .box-slide__list {
-  max-width: 1200px;
   overflow: hidden;
-  margin: 0 auto;
   margin-top: 70px;
-}
-
-.box-slide .box-slide__list .slick-list {
-  margin: 0 -115px;
+  height: 450px;
+  transform: translateX(50px);
 }
 
 .box-slide__list .slick-track {
@@ -402,33 +377,35 @@ a {
   justify-content: center;
 }
 
-
 .box-slide__list .slick-slide {
-  padding: 78px 0;
-  margin: 0 68px;
-  height: 455px;
-  transition: all 1s;
-  overflow: hidden;
+  flex: 0 0 auto;
 }
 
-.box-slide__list .slick-current {
-  margin: 0;
-  padding: 0;
-}
-
-
-.box-slide__item .products-box {
-  width: 100%;
-  height: 300px;
+.box-slide__list .slick-slide>div {
+  width: 250px;
+  height: 250px;
+  margin: 100px 0;
   background-color: #fff;
-  overflow: hidden;
+  transition: all 1s;
+}
 
+.box-slide__list .slick-current>div {
+  width: 450px;
+  height: 450px;
+  margin: 0 0 0 -100px;
+  background-color: #002957;
+}
+
+.box-slide__item {
+  position: relative;
 }
 
 .box-slide__list .slick-current .products-box {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 455px;
-  background-color: #002957;
+  height: 100%;
   padding: 50px 60px;
   box-sizing: border-box;
 }
@@ -491,8 +468,6 @@ a {
   opacity: 1;
   right: 12px;
 }
-
-
 
 /* Company */
 .company {
@@ -1110,68 +1085,26 @@ a {
   opacity: .5;
 }
 
-/* main-page__pagination 버튼 수정*/
-:root {
-  --swiper-pagination-bullet-width: 5px;
-  --swiper-pagination-bullet-height: 5px;
-  --swiper-pagination-bullet-inactive-color: #fff;
-  --swiper-theme-color: #fff;
-  --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-pagination-bullet-vertical-gap: 20px;
-}
-
-.main-page__pagination {
+#fp-nav {
   position: absolute;
   width: 72px;
   height: calc(100% - 98px);
+  top: auto;
   bottom: 0;
-  right: 63px;
+  right: 63px !important;
   z-index: 99;
+  margin-top: 0 !important;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
-.main-page__pagination.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
-  transition: width 0.5s linear, height 0.5s linear;
+#fp-nav.hidden {
+  visibility: hidden;
 }
 
-
-.main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet-active,
-.main-page__pagination.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet-active {
-  width: 80px;
-  height: 80px;
-}
-
-.main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet-active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  white-space: pre-line;
-  border: 1px solid #eee;
-  transition: all .4s;
-  text-align: center;
-}
-
-.main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet-active span {
-  opacity: 1;
-}
-
-.swiper-pagination-bullet span {
-  opacity: 0;
-}
-
-.main-page__pagination.swiper-pagination-vertical.swiper-pagination-bullets,
-.main-page__pagination.swiper-vertical>.swiper-pagination-bullets {
-  right: 63px;
-  top: auto;
-  transform: none;
-}
-
-.main-page__pagination:before {
+#fp-nav::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1183,8 +1116,72 @@ a {
 
 }
 
+#fp-nav ul li {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: -10px;
+}
 
-/* item-slise list-pagination 버튼 수정*/
+#fp-nav ul li:last-child {
+  display: none;
+}
+
+#fp-nav ul li a.active+.fp-tooltip {
+  opacity: 1;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  font-size: 12px;
+  opacity: 1;
+}
+
+#fp-nav ul li a:hover span,
+#fp-nav ul li a span {
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  /* opacity: 0; */
+  transition: opacity 0.3s linear, width 0.3s linear, height 0.3s linear;
+}
+
+#fp-nav ul li a.active:hover span,
+#fp-nav ul li a.active span {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+#fp-nav ul li:hover .fp-tooltip {
+  display: none;
+}
+
+#fp-nav ul li .fp-tooltip {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  width: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.3s linear, opacity 0.3s linear;
+}
+
+/* visual-list__itemlist-pagination 버튼 수정*/
 .list-pagination.swiper-pagination .swiper-pagination-bullet {
   border: 1px solid #fff;
   width: 14px;
@@ -1242,7 +1239,24 @@ a {
   opacity: 1;
 }
 
-/* @media (min-width: 1024px) and (max-width:1920px) */
+/* swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: 100vh;
+  margin: 0;
+}
 
 @media (min-width: 1024px) and (max-width:1920px) {
   .header {
@@ -1338,7 +1352,7 @@ a {
 
   .box-slide .box-slide__list {
     margin: 0;
-    transform: scale(.8);
+    transform: scale(.8) translateX(100px);
   }
 
   .company__box {
