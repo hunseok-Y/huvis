@@ -80,7 +80,6 @@ a {
 }
 
 .header__logo {
-  width: 150px;
   padding: 12px;
   position: fixed;
   top: 0;
@@ -362,7 +361,7 @@ a {
   font-weight: 300;
   line-height: 28px;
   color: #fff;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .box-slide .box-slide__list {
@@ -417,14 +416,15 @@ a {
   font-size: 4rem;
   font-weight: 700;
   color: #15181b;
+  margin-bottom: 24px;
 }
 
 .products-box .text-arear .text {
   color: #15181b;
   font-size: 1.6rem;
   line-height: 24px;
-  margin-top: 24px;
   position: relative;
+  margin-bottom: 24px;
 }
 
 .products-box .info {
@@ -1422,7 +1422,7 @@ a {
 
   .products__text-arear {
     transform: scale(.8);
-    margin-top: 15rem;
+    padding: 4rem 0;
   }
 
   .products__text-arear .title {
@@ -1432,11 +1432,11 @@ a {
   .products__text-arear .text {
     font-size: 1.6rem;
     margin-top: 2rem;
-    margin: 0;
+
   }
 
   .box-slide {
-    transform: scale(.7);
+    transform: scale(.9);
     margin: -60px;
   }
 
